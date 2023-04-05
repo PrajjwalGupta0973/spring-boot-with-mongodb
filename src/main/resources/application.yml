@@ -1,0 +1,43 @@
+# Local DBs config
+spring:  data:    mongodb:      uri: mongodb://localhost:27017/newtest
+    neo4j:
+      uri: bolt://127.0.0.1:7687      username: neo4j
+      password: PrajjwalB4@
+    elasticsearch:      cluster-nodes: localhost:9300
+      cluster-name: Spring-mongodb-elasticsearch  main:    allow-bean-definition-overriding: true
+      
+# App config
+server:  port: 8080
+#spring.application.name=BootMongo
+  address: localhost
+
+#mail config
+testemail:
+      api:
+        key: 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
+fromemail: testemail@gmail.com
+toemail: prajjwal.gupta@gmail.com
+firsttemplate: d-914753635a214a928e70e21fbf60f559
+
+  
+---
+spring:  profiles: default#  profiles.active: prod  profiles.include: development
+myprop: this is default prop
+---
+spring:
+  profiles: development
+  profiles.active: some
+server:
+  port: 8081
+  address: localhost
+myprop: this is dev prop
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8083
+  address: localhost
+
+myprop: this is prod prop from multidoc
+

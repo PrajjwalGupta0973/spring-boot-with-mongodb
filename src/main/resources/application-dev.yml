@@ -1,0 +1,12 @@
+#Local DBs config
+spring:  data:    mongodb:      uri: mongodb://localhost:27017/newtest
+      #neo4j    neo4j:      username: neo4j
+      password: PrajjwalB4@
+
+# App config
+server:  port: 8081
+  address: localhost
+myprop: this is dev prop
+ #spring.application.name=BootMongo
+ 
+#Local Neo4j config
